@@ -1,9 +1,10 @@
 from django.views.decorators.csrf import csrf_exempt
+import environ
 from django.http import HttpResponse
 import telebot
+env = environ.Env()
 
-
-TOKEN = '5968500320:AAHAWsxdGBFVfwdmomhjXEzRDuscszG1A-4'
+TOKEN = env('BOT_TOKEN')
 bot = telebot.TeleBot(TOKEN)
 
 
