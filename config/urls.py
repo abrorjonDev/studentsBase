@@ -6,6 +6,6 @@ from bot.webhook import webhook
 
 urlpatterns = [
     path('webhook/', csrf_exempt(webhook), name='webhook'),
-    path('', admin.site.urls),
+    path('admin/', admin.site.urls),
 
 ]

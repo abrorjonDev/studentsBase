@@ -1,4 +1,3 @@
-from django.views.decorators.csrf import csrf_exempt
 import environ
 from django.http import HttpResponse
 import telebot
@@ -19,9 +18,6 @@ def webhook(request):
 @bot.message_handler(commands=['start', 'help', 'my-forms'])
 def commands(message):
     ...
-
-
-
 
 
 @bot.message_handler()
